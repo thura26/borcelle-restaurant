@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary: #C1272E;
+  --color-primary-hover: #A91E24;
+  --color-background: #FFFBF5;
+  --color-surface: #FFF0E6;
+  --color-surface-hover: #FFD8B8;
+  --color-dark: #1A1E1D;
+  --color-muted: #6B7280;
+  --color-accent: #C9A86A;
+  --color-accent-hover: #B8944F;
+}
+
+body {
+  @apply bg-background text-dark antialiased overflow-x-hidden;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  letter-spacing: 0.015em;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-bayon {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.font-korosu {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.font-inria {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 1.75;
+}
+
+/* Polish typography utilities */
+.label-spacing {
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.heading-tight {
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.body-relaxed {
+  letter-spacing: 0.015em;
+  line-height: 1.75;
+}
+
+.button-spacing {
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+/* Ticker animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Dotted line */
+.dotted-line {
+  flex: 1;
+  border-bottom: 1px dotted #1A1E1D;
+  opacity: 0.3;
+  margin: 0 12px 4px;
+  height: 1px;
+  align-self: flex-end;
+}
+
+/* Hide scrollbar for gallery */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Stepper progress bar */
+@keyframes stepperProgress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes stepperProgressReverse {
+  from { width: 100%; }
+  to { width: 0; }
+}
+
+/* Safari iOS fix for date/time inputs */
+input[type="date"],
+input[type="time"],
+select {
+  min-width: 0;
+  max-width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="date"]::-webkit-date-and-time-value,
+input[type="time"]::-webkit-date-and-time-value {
+  min-width: 0;
+}
+@supports (-webkit-touch-callout: none) {
+  input[type="date"],
+  input[type="time"] {
+    display: block;
+    width: 100%;
+  }
+}
