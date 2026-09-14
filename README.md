@@ -4,7 +4,7 @@
 
 A modern, high-performance restaurant website for **Borcelle** — featuring signature 7-level spicy noodles, K-BBQ, bibimbap, and full e-commerce + reservation workflows. Built with React 19, Vite, Tailwind CSS and GSAP.
 
-**[Live Demo](#) • [Report Bug](https://github.com/thura26/borcelle-restaurant/issues) • [Request Feature](https://github.com/thura26/borcelle-restaurant/issues)**
+**[Live Demo](https://borcelle-restaurant.thura.site/) • [Report Bug](https://github.com/thura26/borcelle-restaurant/issues) • [Request Feature](https://github.com/thura26/borcelle-restaurant/issues)**
 
 ![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-8.2-646CFF?logo=vite&logoColor=white)
